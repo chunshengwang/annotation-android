@@ -15,12 +15,10 @@ import com.lofiwang.beanannotation.compiler.bean;
 public class Person {
     private String name;
     private String age;
-    private String height;
-    private String weight;
 }
 ```
 
-### 2.what will be generated automatically.
+### 2.What will be generated automatically.
 ```
 package com.lofiwang.beanannotation;
 
@@ -30,11 +28,7 @@ import java.lang.String;
 public class PersonBean {
   private String name;
 
-  private String weight;
-
   private String age;
-
-  private String height;
 
   public void setName(String name) {
     this.name=name;
@@ -42,14 +36,6 @@ public class PersonBean {
 
   public String getName() {
     return name;
-  }
-
-  public void setWeight(String weight) {
-    this.weight=weight;
-  }
-
-  public String getWeight() {
-    return weight;
   }
 
   public void setAge(String age) {
@@ -60,17 +46,9 @@ public class PersonBean {
     return age;
   }
 
-  public void setHeight(String height) {
-    this.height=height;
-  }
-
-  public String getHeight() {
-    return height;
-  }
-
   @Override
   public String toString() {
-    return "PersonBean{" + "name:" + name + "weight:" + weight + "age:" + age + "height:" + height + "}";
+    return "PersonBean{" + "name:" + name + "age:" + age + "}";
   }
 }
 ```
