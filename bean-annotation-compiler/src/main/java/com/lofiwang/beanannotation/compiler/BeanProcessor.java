@@ -111,11 +111,7 @@ public class BeanProcessor extends AbstractProcessor {
             return;
         }
         TypeSpec.Builder typeSpecB = TypeSpec.classBuilder(beanName);
-
         typeSpecB.addModifiers(Modifier.PUBLIC);
-//                .addMethod(createSetMethod(elementUtils, superClassName))
-//                .addMethod(newCompareIdMethod())
-
         for (String field : fieldMap.keySet()) {
             typeSpecB.addField(fieldMap.get(field), field, Modifier.PRIVATE);
             typeSpecB.addMethod(createSetMethod(field, fieldMap.get(field)));
@@ -129,7 +125,7 @@ public class BeanProcessor extends AbstractProcessor {
 
     private MethodSpec createSetMethod(String fieldName, TypeName fieldType) {
 
-        String methodName = "set" + upperCase(fieldName);
+        String methodName = "set" + upperFirstChar(fieldName);
         MethodSpec.Builder method = MethodSpec.methodBuilder(methodName)
                 .addModifiers(Modifier.PUBLIC)
                 .addParameter(fieldType, fieldName)
@@ -139,7 +135,7 @@ public class BeanProcessor extends AbstractProcessor {
     }
 
     private MethodSpec createGetMethod(String fieldName, TypeName fieldType) {
-        String methodName = "get" + upperCase(fieldName);
+        String methodName = "get" + upperFirstChar(fieldName);
         MethodSpec.Builder method = MethodSpec.methodBuilder(methodName)
                 .addModifiers(Modifier.PUBLIC)
                 .returns(fieldType)
@@ -167,7 +163,7 @@ public class BeanProcessor extends AbstractProcessor {
     }
 
 
-    public String upperCase(String str) {
+    public String upperFirstChar(String str) {
         char[] ch = str.toCharArray();
         if (ch[0] >= 'a' && ch[0] <= 'z') {
             ch[0] = (char) (ch[0] - 32);
