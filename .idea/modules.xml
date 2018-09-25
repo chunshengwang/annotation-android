@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bean-annotation.iml" filepath="$PROJECT_DIR$/bean-annotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bean-annotation-compiler/bean-annotation-compiler.iml" filepath="$PROJECT_DIR$/bean-annotation-compiler/bean-annotation-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bean-compiler/bean-compiler.iml" filepath="$PROJECT_DIR$/bean-compiler/bean-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bean-sdk/bean-sdk.iml" filepath="$PROJECT_DIR$/bean-sdk/bean-sdk.iml" />
     </modules>
   </component>
 </project>

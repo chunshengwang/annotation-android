@@ -1,1 +1,1 @@
-include ':app', ':bean-annotation-compiler'
+include ':app', ':bean-compiler', ':bean-sdk'
