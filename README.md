@@ -52,3 +52,7 @@ public class PersonBean {
   }
 }
 ```
+
+### 3.How to resolve AndroidStudio prompt underline on JavaPoet Modifier.PUBLIC.
+resolve: We can new Android Library Module and dependencies annotationProcessor project(':xxx-compiler') instead of app module.
+
