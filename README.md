@@ -5,10 +5,10 @@ annotation processor generate java bean get() set() toString()
 
 # Question
 ### 1.How to resolve AndroidStudio prompt underline on JavaPoet Modifier.PUBLIC.
-resolve: We can new Android Library Module, in which dependencies annotationProcessor project(':xxx-compiler') instead of app module.
+**resolve:** We can new Android Library Module, in which dependencies annotationProcessor project(':xxx-compiler') instead of app module.
 ```
 MethodSpec.Builder method = MethodSpec.methodBuilder(methodName)
-                .addModifiers(Modifier.PUBLIC)
+                <span style="border-bottom:2px dashed yellow;">.addModifiers(Modifier.PUBLIC)</span>
                 .returns(fieldType)
                 .addStatement("return " + fieldName);
 ```
