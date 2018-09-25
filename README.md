@@ -8,7 +8,7 @@ annotation processor generate java bean get() set() toString()
 **resolve:** We can new Android Library Module, in which dependencies annotationProcessor project(':xxx-compiler') instead of app module.
 ```
 MethodSpec.Builder method = MethodSpec.methodBuilder(methodName)
-                <span style="border-bottom:2px dashed yellow;">.addModifiers(Modifier.PUBLIC)</span>
+                .addModifiers(Modifier.PUBLIC)
                 .returns(fieldType)
                 .addStatement("return " + fieldName);
 ```
