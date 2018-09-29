@@ -1,4 +1,4 @@
-package com.lofiwang.beanannotation.compiler;
+package com.lofiwang.beanannotation.compiler.util;
 
 import javax.annotation.processing.Messager;
 import javax.lang.model.element.Element;
