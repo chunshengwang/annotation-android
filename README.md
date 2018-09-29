@@ -1,6 +1,6 @@
 # bean-annotation
-annotation processor generate java bean get() set() toString()
-///注解处理器为java bean 生成get() set() toString() 方法
+1. @Bean(generate get() set() toString())
+2. @Parcelable(implements Parcelable)
 
 
 # Question
